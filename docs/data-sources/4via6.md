@@ -14,7 +14,7 @@ The 4via6 data source is calculates an IPv6 prefix for a given site ID and IPv4 
 
 ```terraform
 data "tailscale_4via6" "example" {
-  site = 7
+  site = 50000
   cidr = "10.1.1.0/24"
 }
 ```
@@ -25,7 +25,7 @@ data "tailscale_4via6" "example" {
 ### Required
 
 - `cidr` (String) The IPv4 CIDR to map
-- `site` (Number) Site ID (between 0 and 255)
+- `site` (Number) Site ID (between 0 and 65536)
 
 ### Read-Only
 

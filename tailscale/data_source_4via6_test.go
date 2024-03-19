@@ -13,7 +13,7 @@ import (
 
 const testDataSource4Via6 = `
 data "tailscale_4via6" "example" {
-  site = 7
+  site = 50000
   cidr = "10.1.1.0/24"
 }
 `
@@ -72,7 +72,7 @@ func check4Via6Result(n string) resource.TestCheckFunc {
 			return fmt.Errorf("expected ipv6 to be %q but got %q", expected, got)
 		}
 
-		if expected != "fd7a:115c:a1e0:b1a:0:7:a01:100/120" {
+		if expected != "fd7a:115c:a1e0:b1a:0:c350:a01:100/120" {
 			return fmt.Errorf("calculated %q, which is different than the value in Tailscale docs", expected)
 		}
 
